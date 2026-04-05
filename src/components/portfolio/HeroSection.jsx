@@ -70,7 +70,7 @@ export default function HeroSection() {
           className="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
         >
           Automation Engineer crafting reliable, scalable workflows.
-          Specializing in Python, Shell scripting, and HCL Workload Automation with strong knowledge of Unix, AWS, and networking.”
+          Specializing in Python, Shell scripting, and HCL Workload Automation with strong knowledge of Unix, AWS, and networking.
 
         </motion.p>
 
