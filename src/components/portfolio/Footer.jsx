@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
-            {["About", "Projects", "Experience", "Credentials", "Contact"].map((item) => (
+            {["About", "Projects", "Experience", "Credentials"].map((item) => (
               <button
                 key={item}
                 onClick={() =>
