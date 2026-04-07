@@ -30,7 +30,7 @@ export default function HeroSection() {
           className="flex justify-center mb-6"
         >
           <div className="relative">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white/40 ring-4 ring-violet-500/50">
+            <div className="w-24 h-24 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/40 ring-4 ring-violet-500/50">
               <img src={dp} className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-emerald-500 border-2 border-gray-950" />
@@ -54,7 +54,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-          className="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-gray-100 leading-[1.05]"
+          className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-100 leading-[1.05]"
         >
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
@@ -67,7 +67,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="mt-6 text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed italic"
+          className="mt-3 text-lg sm:text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed italic"
         >
           Crafting automation solutions and scalable web systems.
         </motion.p>
@@ -90,7 +90,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button
             size="lg"

@@ -1,14 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code2, Database, Globe, Layers, Cpu, Palette } from "lucide-react";
+import { Code2, BrainCircuit, Globe, Workflow, Cpu, Network } from "lucide-react";
 
 const skills = [
-  { icon: Layers, name: "Automation", items: ["Microsoft Power Automate", "Python/Shell Scripting", "Ansible", "Cron Jobs"] },
+  { icon: Workflow, name: "Automation", items: ["Microsoft Power Automate", "Python/Shell Scripting", "Ansible", "Cron Jobs"] },
   { icon: Code2, name: "Web Development", items: ["HTML & CSS", "JavaScript", "Node.js", "Tailwind CSS"] },
-  { icon: Database, name: "Databases", items: ["Node.js", "Python", "PostgreSQL", "Redis"] },
   { icon: Globe, name: "Cloud & DevOps", items: ["AWS", "Azure", "Docker", "CI/CD", "Terraform"] },
+  { icon: BrainCircuit, name: "AI & Generative Tools", items: ["Prompt Engineering", "ChatGPT", "Grok", "MS Copilot"] },
+  { icon: Network, name: "IT Infrastructure", items: ["Data Center", "Networking", "Firewalls", "VPNs"] },
   { icon: Cpu, name: "Tools", items: ["HCL Workload Automation", "Git", "Linux/Unix", "Agile", "ServiceNow", "Splunk"] },
-  { icon: Palette, name: "Design", items: ["Figma", "UI/UX", "Responsive", "Accessibility"] },
+  
 ];
 
 function SkillCard({ skill, index }) {
