@@ -41,7 +41,7 @@ function SkillCard({ skill, index }) {
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 px-6 bg-gray-950 relative">
+    <section id="about" className="py-20 px-6 bg-gray-950 relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       <div className="absolute top-1/3 -left-48 w-96 h-96 bg-violet-700/30 rounded-full blur-[128px]" />
 

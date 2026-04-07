@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-950 py-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-950 py-20">
       {/* Gradient orbs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-violet-700/50 rounded-full blur-[128px]" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-indigo-700/50 rounded-full blur-[128px]" />
@@ -43,7 +43,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-8 shadow-md">
+          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-white/40 bg-white/10 backdrop-blur-sm mb-8 shadow-md">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span className="text-sm text-gray-100 tracking-wide">Available for opportunities</span>
           </div>
@@ -122,7 +122,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-12 flex items-center justify-center gap-6"
+          className="mt-6 flex items-center justify-center gap-6"
         >
           {[
             { icon: Linkedin, href: "https://www.linkedin.com/in/mohammad-sajid-mir-b99137159/", label: "LinkedIn" },
