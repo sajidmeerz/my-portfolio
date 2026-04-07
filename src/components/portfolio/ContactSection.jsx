@@ -74,7 +74,7 @@ export default function ContactSection() {
             </div>
 
             <div className="p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02]">
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed italic">
                 "Transforming complexity into simplicity through automation. Let’s streamline, optimize, and make your vision real."
               </p>
               <p className="text-violet-400 text-sm mt-3 font-medium">— Mo Sajid</p>
