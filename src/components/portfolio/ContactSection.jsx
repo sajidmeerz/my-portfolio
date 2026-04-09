@@ -127,7 +127,7 @@ export default function ContactSection() {
                     name="user_email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="meerz@example.com"
+                    placeholder="example@example.com"
                     required
                     className="bg-white/[0.05] border-white/[0.08] text-white placeholder:text-gray-600 focus:border-violet-500/50 h-12 rounded-xl"
                   />

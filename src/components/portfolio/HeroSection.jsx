@@ -1,5 +1,5 @@
 import React from "react";
-import dp from "../../assets/dp.png";
+import dp from "@/assets/dp.png";
 import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";

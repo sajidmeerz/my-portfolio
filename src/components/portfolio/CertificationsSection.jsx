@@ -1,34 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, Calendar, ExternalLink } from "lucide-react";
+import JavaImg from "@/assets/java.jpeg";
+import GoogleImg from "@/assets/googlesup.jpeg";
+import IbmCyberImg from "@/assets/cybersec.jpeg";
 
 const certifications = [
   {
-    name: "AWS Certified Solutions Architect",
-    provider: "Amazon Web Services",
-    period: "Jan 2024",
-    description: "Validated expertise in designing distributed systems and scalable solutions on AWS cloud infrastructure.",
-    highlights: ["Cloud Architecture", "Distributed Systems", "AWS Services"],
-    url: "https://aws.amazon.com/certification/",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80",
+    name: "Java For Android",
+    provider: "Coursera",
+    period: "June 2020",
+    description: "Demonstrated proficiency in leveraging core Java programming and Android Studio to develop scalable, user‑focused mobile applications.",
+    highlights: ["Andriod Studio", "Java", "Andriod Development", "Algorithms", "Data Structures"],
+    url: "https://www.coursera.org/account/accomplishments/verify/YZQBAPUCK547",
+    image: JavaImg,
   },
   {
-    name: "Google Professional Cloud Developer",
-    provider: "Google Cloud",
-    period: "Mar 2023",
-    description: "Demonstrated ability to build scalable, secure, and highly available applications using Google Cloud.",
-    highlights: ["GCP Services", "Scalable Apps", "Cloud Security"],
-    url: "",
-    image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=600&q=80",
+    name: "Google Google IT Support Professional",
+    provider: "Coursera",
+    period: "April 2024",
+    description: "Validated expertise in troubleshooting, networking, operating systems, system administration, and IT security, with competencies aligned to entry‑level IT support roles.",
+    highlights: ["Computer Hardware", "System Administration", "Networking", "File Systems", "IT Automation", "Troubleshooting", "Techincal Support", "Version Control"],
+    url: "https://www.coursera.org/account/accomplishments/certificate/EJBT9SGVKWP2",
+    image: GoogleImg,
   },
   {
-    name: "React Advanced Patterns Training",
-    provider: "Udemy",
-    period: "Sep 2023",
-    description: "Completed intensive training on advanced React patterns including compound components, render props, and custom hooks.",
-    highlights: ["Compound Components", "Custom Hooks", "Render Props"],
-    url: "",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80",
+    name: "Introduction to Cybersecurity Tools & Cyberattacks",
+    provider: "Coursera",
+    period: "April 2024",
+    description: "Developed foundational skills in threat recognition, malware prevention, authentication, and identity management to safeguard digital assets and apply security controls across networks.",
+    highlights: ["MFA", "Cybersecurity", "Security Controls", "IAM", "Authentications"],
+    url: "https://www.coursera.org/account/accomplishments/certificate/CXC6DQDENHRC",
+    image: IbmCyberImg,
   },
 ];
 
