@@ -95,7 +95,7 @@ export default function HeroSection() {
           <Button
             size="lg"
             className="bg-white text-black hover:bg-gray-200 rounded-full px-8 h-12 text-base font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2"
-            onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })}
           >
             <ArrowDown className="w-5 h-5" /> View My Work
           </Button>
@@ -107,14 +107,14 @@ export default function HeroSection() {
           >
             <Mail className="w-5 h-5" /> Get in Touch
           </Button>
-          <Button
+          {/* <Button
             variant="outline"
             size="lg"
             className="border-white/50 text-gray-100 hover:bg-white/20 rounded-full px-8 h-12 text-base font-medium transition-all duration-300 bg-transparent flex items-center gap-2"
             onClick={() => window.open("/resume.pdf", "_blank")}
           >
-            <FileText className="w-5 h-5" /> Resume
-          </Button>
+            /*<FileText className="w-5 h-5" /> Resume 
+          </Button> */}
         </motion.div>
 
         {/* Social links */}

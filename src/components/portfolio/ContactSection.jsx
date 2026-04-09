@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import emailjs from "@emailjs/browser";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -12,17 +13,31 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-    setFormData({ name: "", email: "", message: "" });
+
+    emailjs.sendForm(
+      "service_gvov9rw",     // Your Service ID
+      "template_2mlcueg",    // Your Template ID
+      e.target,              // the form element
+      "R-9qIFY499B95yr74"      // Replace with your Public Key from EmailJS
+    ).then(
+      () => {
+        setSent(true);
+        setTimeout(() => setSent(false), 3000);
+        setFormData({ name: "", email: "", message: "" });
+      },
+      (error) => {
+        console.error("EmailJS error:", error);
+      }
+    );
   };
 
   return (
-    <section id="contact" className="py-32 px-6 bg-[#0a0a0f] relative">
+    <section id="contact" className="py-20 px-6 bg-[#0a0a0f] relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-violet-600/10 rounded-full blur-[200px]" />
 
       <div className="max-w-6xl mx-auto relative z-10">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +45,7 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-16"
         >
-          <span className="text-sm font-medium text-violet-400 tracking-widest uppercase">Contact</span>
+          <span className="text-sm font-medium text-yellow-400 tracking-widest uppercase">Contact</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 leading-tight">
             Let's work together
           </h2>
@@ -40,7 +55,7 @@ export default function ContactSection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-12">
-          {/* Contact Info */}
+          {/* Contact Info (left column) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,12 +71,12 @@ export default function ContactSection() {
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
                   <div className="w-11 h-11 rounded-xl bg-white/[0.05] border border-white/[0.06] flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-5 h-5 text-violet-400" />
+                    <item.icon className="w-5 h-5 text-yellow-400" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">{item.label}</p>
                     {item.href ? (
-                      <a href={item.href} className="text-white hover:text-violet-300 transition-colors flex items-center gap-1">
+                      <a href={item.href} className="text-white hover:text-yellow-300 transition-colors flex items-center gap-1">
                         {item.value}
                         <ArrowUpRight className="w-3.5 h-3.5" />
                       </a>
@@ -81,7 +96,7 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Contact Form (right column) */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -94,6 +109,7 @@ export default function ContactSection() {
                 <div className="space-y-2">
                   <Label className="text-gray-300 text-sm">Your Name</Label>
                   <Input
+                    name="user_name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Mo Sajid"
@@ -105,6 +121,7 @@ export default function ContactSection() {
                   <Label className="text-gray-300 text-sm">Your Email</Label>
                   <Input
                     type="email"
+                    name="user_email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="meerz@example.com"
@@ -116,6 +133,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <Label className="text-gray-300 text-sm">Message</Label>
                 <Textarea
+                  name="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell me about your idea..."

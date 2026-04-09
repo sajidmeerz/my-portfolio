@@ -104,7 +104,7 @@ function ProjectCard({ project, index }) {
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-32 px-6 bg-[#0a0a0f] relative">
+    <section id="projects" className="py-20 px-6 bg-[#0a0a0f] relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="absolute top-1/2 -right-48 w-96 h-96 bg-indigo-600/10 rounded-full blur-[128px]" />
 
@@ -116,7 +116,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-16"
         >
-          <span className="text-sm font-medium text-violet-400 tracking-widest uppercase">Projects</span>
+          <span className="text-sm font-medium text-yellow-400 tracking-widest uppercase">Projects</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3 leading-tight">
             Selected work I'm proud of
           </h2>

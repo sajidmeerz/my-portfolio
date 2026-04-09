@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const navItems = ["About", "Projects", "Experience", "Credentials", "Contact"];
+const navItems = ["About", "Experience", "Certifications", "Contact"];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,9 +34,9 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-white font-bold text-lg tracking-tight hover:text-violet-400 transition-colors"
+            className="text-white font-bold text-lg tracking-tight hover:text-yellow-400 transition-colors"
           >
-            MS<span className="text-violet-400">.</span>
+            MS<span className="text-yellow-400">.</span>
           </button>
 
           {/* Desktop nav */}
@@ -48,7 +48,7 @@ export default function Navbar() {
                 className="text-sm text-gray-400 hover:text-white transition-colors duration-300 relative group"
               >
                 {item}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-violet-400 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-yellow-400 group-hover:w-full transition-all duration-300" />
               </button>
             ))}
             <button

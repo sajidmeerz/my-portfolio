@@ -53,11 +53,11 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-16"
         >
-          <span className="text-sm font-medium text-violet-400 tracking-widest uppercase">About</span>
+          <span className="text-sm font-medium text-yellow-400 tracking-widest uppercase">About</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-100 mt-3 leading-tight">
-            Building software that makes a difference
+            Building solutions that empower and inspire
           </h2>
-          <p className="text-gray-200 mt-4 leading-relaxed text-lg mx-auto text-justify">
+          <p className="text-gray-200 mt-4 leading-relaxed text-lg mx-auto text-left md:text-justify">
             Automation Engineer with 4+ years of experience in Python and Shell scripting, specializing in
             HCL Workload Automation (HWA) administration and job scheduling. Skilled in designing and
             optimizing enterprise automation workflows to reduce manual interventions and improve SLA compliance.
