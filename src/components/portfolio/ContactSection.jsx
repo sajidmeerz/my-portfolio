@@ -9,24 +9,27 @@ import emailjs from "@emailjs/browser";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState("idle"); 
+  // "idle" | "sending" | "sent"
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setStatus("sending"); // show immediate feedback
 
     emailjs.sendForm(
       "service_gvov9rw",     // Your Service ID
       "template_2mlcueg",    // Your Template ID
       e.target,              // the form element
-      "R-9qIFY499B95yr74"      // Replace with your Public Key from EmailJS
+      "R-9qIFY499B95yr74"    // Your Public Key from EmailJS
     ).then(
       () => {
-        setSent(true);
-        setTimeout(() => setSent(false), 3000);
+        setStatus("sent"); // show success
+        setTimeout(() => setStatus("idle"), 3000); // reset after 3s
         setFormData({ name: "", email: "", message: "" });
       },
       (error) => {
         console.error("EmailJS error:", error);
+        setStatus("idle"); // reset if error
       }
     );
   };
@@ -145,14 +148,19 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 size="lg"
+                disabled={status === "sending"} // prevent multiple clicks
                 className={`w-full h-12 rounded-xl font-medium text-base transition-all duration-300 ${
-                  sent
+                  status === "sent"
                     ? "bg-emerald-600 hover:bg-emerald-700"
+                    : status === "sending"
+                    ? "bg-yellow-600 hover:bg-yellow-700"
                     : "bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700"
                 }`}
               >
-                {sent ? (
+                {status === "sent" ? (
                   "Message Sent! ✓"
+                ) : status === "sending" ? (
+                  "Sending..."
                 ) : (
                   <span className="flex items-center gap-2">
                     Send Message
